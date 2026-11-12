@@ -1,0 +1,36 @@
+{
+  "name": "trailkeep",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run typecheck && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.node.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "e2e": "playwright test",
+    "assets:map": "node scripts/fetch-map-assets.mjs",
+    "assets:icons": "node scripts/make-icons.mjs"
+  },
+  "dependencies": {
+    "idb": "8.0.4",
+    "maplibre-contour": "0.1.1",
+    "maplibre-gl": "6.18.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.0",
+    "@types/node": "24.19.2",
+    "@types/react": "18.3.31",
+    "@types/react-dom": "18.3.7",
+    "@vitejs/plugin-react": "6.3.0",
+    "typescript": "7.0.2",
+    "vite": "8.3.8",
+    "vite-plugin-pwa": "2.0.0",
+    "vitest": "5.1.0",
+    "workbox-window": "7.4.1"
+  }
+}
